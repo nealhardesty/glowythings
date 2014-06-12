@@ -24,6 +24,7 @@ function getBrightness(req) {
 function handleUpdate(req, res) {
 	var led = req.params[0];
 	var brightness = getBrightness(req);
+	console.log('>>> ' + led + ':' + brightness);
 	if(pi)
 		pi[led] = getBrightness(req);
 	res.status(200).send(pi.values);
@@ -37,7 +38,7 @@ app.post(/\/(red|green|blue|orange|yellow|white|all|random)\/?/, function(req, r
 
 // everything else just returns the current values
 app.get(/\/.*/, function(req, res) { 
-	if(!pi)
+	if(pi)
 		res.status(200).send(pi.values);
 	else
 		res.status(204).send('');
@@ -46,9 +47,12 @@ app.get(/\/.*/, function(req, res) {
 // PIGLOW START
 piglow(function(error, piInit) {
 	piError = error;
+	if(error)
+		console.log('>>> piglow error: ' + error);
+
 	pi = piInit;
 	if(pi !== null) {
-  	pi.reset;
+ 	 	pi.reset;
 		console.log('>>> piglow init success');
 	} else {
 		console.log('>>> piglow init failed, defaulting to mocked interface: ' + error);
