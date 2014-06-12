@@ -8,15 +8,7 @@ var app = express();
 
 app.use(bodyparser());
 
-// ROUTES
-app.get('/ping', function(req, res){
-	if(pi === null) {
-		res.status(404).send('piglow down: ' + piError + '\n');
-	} else {
-  	res.status(200).send('piglow up\n');
-	}
-});
-
+// GENERAL UTILITY
 function getBrightness(req) {
 	var brightness = req.param('brightness') || req.param('b') || 255;
 	brightness = parseFloat(brightness);
@@ -34,13 +26,22 @@ function handleUpdate(req, res) {
 	var brightness = getBrightness(req);
 	if(pi)
 		pi[led] = getBrightness(req);
-	res.status(200).send(led + ':' + brightness +'\n');
+	res.status(200).send(pi.values);
 }
 
+// ROUTES
 app.post(/\/(l_[012]_[012345])\/?/, function(req, res) { handleUpdate(req, res); });
 app.post(/\/(ring_[012345])\/?/, function(req, res) { handleUpdate(req, res); });
 app.post(/\/(leg_[0123])\/?/, function(req, res) { handleUpdate(req, res); });
 app.post(/\/(red|green|blue|orange|yellow|white|all|random)\/?/, function(req, res) { handleUpdate(req, res); });
+
+// everything else just returns the current values
+app.get(/\/.*/, function(req, res) { 
+	if(!pi)
+		res.status(200).send(pi.values);
+	else
+		res.status(204).send('');
+});
 
 // PIGLOW START
 piglow(function(error, piInit) {
