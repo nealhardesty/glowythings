@@ -8,9 +8,13 @@ var app = express();
 
 app.use(bodyparser());
 
+
+// CONFIGURATION
+var DEFAULT_BRIGHTNESS=125;
+
 // GENERAL UTILITY
 function getBrightness(req) {
-	var brightness = req.param('brightness') || req.param('b') || 255;
+	var brightness = req.param('brightness') || req.param('b') || DEFAULT_BRIGHTNESS;
 	brightness = parseFloat(brightness);
 	if(isNaN(brightness) || brightness > 255)
 		brightness = 255;
@@ -36,6 +40,14 @@ app.post(/\/(ring_[012345])\/?/, function(req, res) { handleUpdate(req, res); })
 app.post(/\/(leg_[0123])\/?/, function(req, res) { handleUpdate(req, res); });
 app.post(/\/(red|green|blue|orange|yellow|white|all|random)\/?/, function(req, res) { handleUpdate(req, res); });
 
+// Demo page
+app.get(/\/demo\/?/, function(req, res) {
+	res.sendfile('static/index.html');
+});
+app.get(/\/static\/([^\/]+)/, function(req, res) {
+	res.sendfile('static/' + req.params[0]);
+});
+
 // everything else just returns the current values
 app.get(/\/.*/, function(req, res) { 
 	if(pi)
@@ -45,6 +57,7 @@ app.get(/\/.*/, function(req, res) {
 });
 
 // PIGLOW START
+console.log('>>> glowythings starting...');
 piglow(function(error, piInit) {
 	piError = error;
 	if(error)
