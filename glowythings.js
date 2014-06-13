@@ -17,7 +17,7 @@ function getBrightness(req) {
 	var brightness = req.param('brightness') || req.param('b') || DEFAULT_BRIGHTNESS;
 	brightness = parseFloat(brightness);
 	if(isNaN(brightness) || brightness > 255)
-		brightness = 255;
+		brightness = DEFAULT_BRIGHTNESS;
 	else if(brightness < 0)
 		brightness = 0;
 	return brightness;
