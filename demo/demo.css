@@ -1,3 +1,4 @@
+
 	slider {
 		display:     block;
 		position:    relative;
@@ -87,9 +88,12 @@
 		margin: 5px 10px;
 		padding: 4px 5px;
 		width: 225px;
+		color: #999;
+		font-weight: bold;
 	}
 
-	div.section {
-		display: block;
+	ul.section {
 		margin-bottom: 20px;
 	}
+
+	

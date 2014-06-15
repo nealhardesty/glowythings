@@ -12,122 +12,171 @@
 	<script src="/demo/demo.js"></script>
 </head>
 <body ng-controller="glowythingsController">
-	<h1>Glowy Things!</h1>
 	<p>{{error}}</p>
 
-	<div class="section">
+	<ul class="section list-inline">
+	<li>
 	<div class="slider" id="all">
 		Everything
 		<slider ng-model="data.all" floor="0" ceiling="255" ng-change="update('all')"></div>
 	</div>
-	</div>
+	</li>
+	</ul>
 
-	<div class="section">
+	<ul class="section list-inline">
+	<li>
 	<div class="slider" id="redRing">
 		Red / Ring 0
-		<slider ng-model="data.red" floor="0" ceiling="255" ng-change="update('red')"></div>
+		<slider ng-model="data.red" floor="0" ceiling="254" ng-change="update('red')"></div>
 	</div>
+	</li>
+	<li>
 	<div class="slider" id="orangeRing">
 		Orange / Ring 1
-		<slider ng-model="data.orange" floor="0" ceiling="255" ng-change="update('orange')"></div>
+		<slider ng-model="data.orange" floor="0" ceiling="254" ng-change="update('orange')"></div>
 	</div>
+	</li>
+	<li>
 	<div class="slider" id="yellowRing">
 		Yellow / Ring 2
-		<slider ng-model="data.yellow" floor="0" ceiling="255" ng-change="update('yellow')"></div>
+		<slider ng-model="data.yellow" floor="0" ceiling="254" ng-change="update('yellow')"></div>
 	</div>
+	</li>
+	<li>
 	<div class="slider" id="greenRing">
 		Green / Ring 3
-		<slider ng-model="data.green" floor="0" ceiling="255" ng-change="update('green')"></div>
+		<slider ng-model="data.green" floor="0" ceiling="254" ng-change="update('green')"></div>
 	</div>
+	</li>
+	<li>
 	<div class="slider" id="blueRing">
 		Blue / Ring 4
-		<slider ng-model="data.blue" floor="0" ceiling="255" ng-change="update('blue')"></div>
+		<slider ng-model="data.blue" floor="0" ceiling="254" ng-change="update('blue')"></div>
 	</div>
+	</li>
+	<li>
 	<div class="slider" id="whiteRing">
 		White / Ring 5
-		<slider ng-model="data.white" floor="0" ceiling="255" ng-change="update('white')"></div>
+		<slider ng-model="data.white" floor="0" ceiling="254" ng-change="update('white')"></div>
 	</div>
-	</div>
+	</li>
+	</ul>
 
-	<div class="section">
+	<ul class="section list-inline">
+	<li>
 	<div class="slider" id="l_0_0">
 		Leg 0 Ring 0
-		<slider ng-model="data.l_0_0" floor="0" ceiling="255" ng-change="update('l_0_0')"></div>
+		<slider ng-model="data.l_0_0" floor="0" ceiling="254" ng-change="update('l_0_0')"></div>
 	</div>
+	</li>
+	<li>
 	<div class="slider" id="l_1_0">
 		Leg 1 Ring 0
-		<slider ng-model="data.l_1_0" floor="0" ceiling="255" ng-change="update('l_1_0')"></div>
+		<slider ng-model="data.l_1_0" floor="0" ceiling="254" ng-change="update('l_1_0')"></div>
 	</div>
+	</li>
+	<li>
 	<div class="slider" id="l_2_0">
 		Leg 2 Ring 0
-		<slider ng-model="data.l_2_0" floor="0" ceiling="255" ng-change="update('l_2_0')"></div>
+		<slider ng-model="data.l_2_0" floor="0" ceiling="254" ng-change="update('l_2_0')"></div>
 	</div>
+	</li>
+	<li>
 
 	<div class="slider" id="l_0_1">
 		Leg 0 Ring 1
-		<slider ng-model="data.l_0_1" floor="0" ceiling="255" ng-change="update('l_0_1')"></div>
+		<slider ng-model="data.l_0_1" floor="0" ceiling="254" ng-change="update('l_0_1')"></div>
 	</div>
+	</li>
+	<li>
 	<div class="slider" id="l_1_1">
 		Leg 1 Ring 1
-		<slider ng-model="data.l_1_1" floor="0" ceiling="255" ng-change="update('l_1_1')"></div>
+		<slider ng-model="data.l_1_1" floor="0" ceiling="254" ng-change="update('l_1_1')"></div>
 	</div>
+	</li>
+	<li>
 	<div class="slider" id="l_2_1">
 		Leg 2 Ring 1
-		<slider ng-model="data.l_2_1" floor="0" ceiling="255" ng-change="update('l_2_1')"></div>
+		<slider ng-model="data.l_2_1" floor="0" ceiling="254" ng-change="update('l_2_1')"></div>
 	</div>
+	</li>
+	<li>
 
 	<div class="slider" id="l_0_2">
 		Leg 0 Ring 2
-		<slider ng-model="data.l_0_2" floor="0" ceiling="255" ng-change="update('l_0_2')"></div>
+		<slider ng-model="data.l_0_2" floor="0" ceiling="254" ng-change="update('l_0_2')"></div>
 	</div>
+	</li>
+	<li>
 	<div class="slider" id="l_1_2">
 		Leg 1 Ring 2
-		<slider ng-model="data.l_1_2" floor="0" ceiling="255" ng-change="update('l_1_2')"></div>
+		<slider ng-model="data.l_1_2" floor="0" ceiling="254" ng-change="update('l_1_2')"></div>
 	</div>
+	</li>
+	<li>
 	<div class="slider" id="l_2_2">
 		Leg 2 Ring 2
-		<slider ng-model="data.l_2_2" floor="0" ceiling="255" ng-change="update('l_2_2')"></div>
+		<slider ng-model="data.l_2_2" floor="0" ceiling="254" ng-change="update('l_2_2')"></div>
 	</div>
+	</li>
+	<li>
 
 	<div class="slider" id="l_0_3">
 		Leg 0 Ring 3
-		<slider ng-model="data.l_0_3" floor="0" ceiling="255" ng-change="update('l_0_3')"></div>
+		<slider ng-model="data.l_0_3" floor="0" ceiling="254" ng-change="update('l_0_3')"></div>
 	</div>
+	</li>
+	<li>
 	<div class="slider" id="l_1_3">
 		Leg 1 Ring 3
-		<slider ng-model="data.l_1_3" floor="0" ceiling="255" ng-change="update('l_1_3')"></div>
+		<slider ng-model="data.l_1_3" floor="0" ceiling="254" ng-change="update('l_1_3')"></div>
 	</div>
+	</li>
+	<li>
 	<div class="slider" id="l_2_3">
 		Leg 2 Ring 3
-		<slider ng-model="data.l_2_3" floor="0" ceiling="255" ng-change="update('l_2_3')"></div>
+		<slider ng-model="data.l_2_3" floor="0" ceiling="254" ng-change="update('l_2_3')"></div>
 	</div>
+	</li>
+	<li>
 
 	<div class="slider" id="l_0_4">
 		Leg 0 Ring 4
-		<slider ng-model="data.l_0_4" floor="0" ceiling="255" ng-change="update('l_0_4')"></div>
+		<slider ng-model="data.l_0_4" floor="0" ceiling="254" ng-change="update('l_0_4')"></div>
 	</div>
+	</li>
+	<li>
 	<div class="slider" id="l_1_4">
 		Leg 1 Ring 4
-		<slider ng-model="data.l_1_3" floor="0" ceiling="255" ng-change="update('l_1_4')"></div>
+		<slider ng-model="data.l_1_3" floor="0" ceiling="254" ng-change="update('l_1_4')"></div>
 	</div>
+	</li>
+	<li>
 	<div class="slider" id="l_2_4">
 		Leg 2 Ring 4
-		<slider ng-model="data.l_2_4" floor="0" ceiling="255" ng-change="update('l_2_4')"></div>
+		<slider ng-model="data.l_2_4" floor="0" ceiling="254" ng-change="update('l_2_4')"></div>
 	</div>
+	</li>
+	<li>
 
 	<div class="slider" id="l_0_5">
 		Leg 0 Ring 5
-		<slider ng-model="data.l_0_5" floor="0" ceiling="255" ng-change="update('l_0_5')"></div>
+		<slider ng-model="data.l_0_5" floor="0" ceiling="254" ng-change="update('l_0_5')"></div>
 	</div>
+	</li>
+	<li>
 	<div class="slider" id="l_1_5">
 		Leg 1 Ring 5
-		<slider ng-model="data.l_1_5" floor="0" ceiling="255" ng-change="update('l_1_5')"></div>
+		<slider ng-model="data.l_1_5" floor="0" ceiling="254" ng-change="update('l_1_5')"></div>
 	</div>
+	</li>
+	<li>
 	<div class="slider" id="l_2_5">
 		Leg 2 Ring 5
-		<slider ng-model="data.l_2_5" floor="0" ceiling="255" ng-change="update('l_2_5')"></div>
+		<slider ng-model="data.l_2_5" floor="0" ceiling="254" ng-change="update('l_2_5')"></div>
 	</div>
-	<div>
+	</li>
+	</ul>
 
 
 
