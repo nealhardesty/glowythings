@@ -11,6 +11,7 @@ app.use(bodyparser());
 
 
 // CONFIGURATION
+var HTTP_PORT=8080;
 var DEFAULT_BRIGHTNESS=125;
 
 // GENERAL UTILITY
@@ -29,7 +30,6 @@ function getBrightness(req) {
 function handleUpdate(req, res) {
 	var led = req.params[0];
 	var brightness = getBrightness(req);
-	console.log('>>> ' + led + ':' + brightness);
 	if(pi)
 		pi[led] = getBrightness(req);
 	res.status(200).send(pi.values);
@@ -80,6 +80,6 @@ piglow(function(error, piInit) {
 });
 
 // SERVER START
-var server = app.listen(8080, function() {
+var server = app.listen(HTTP_PORT, function() {
     console.log('>>> listening on port %d', server.address().port);
 });
