@@ -1,0 +1,26 @@
+{
+  "name": "GlowyThings Demo",
+  "main": "demo.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/nealhardesty/glowythings",
+  "authors": [
+    "Neal Hardesty <nealhardesty@yahoo.com>"
+  ],
+  "description": "NodeJS PiGlow Demo",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.2.18",
+    "angular-slider": "git://github.com/Venturocket/angular-slider.git"
+  }
+}
