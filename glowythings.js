@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 var express = require('express');
 var bodyparser = require('body-parser');
 var piglow = require('piglow');
@@ -41,10 +42,11 @@ app.post(/\/(leg_[0123])\/?/, function(req, res) { handleUpdate(req, res); });
 app.post(/\/(red|green|blue|orange|yellow|white|all|random)\/?/, function(req, res) { handleUpdate(req, res); });
 
 // Demo page
-app.get(/\/demo\/?/, function(req, res) {
-	res.sendfile('demo/index.html');
+app.get(/\/demo\/?$/, function(req, res) {
+	res.sendfile('demo/demo.html');
 });
-app.get(/\/demo\/([^\/]+)/, function(req, res) {
+app.get(/\/demo\/(.+)$/, function(req, res) {
+	console.log('sending demo/' + req.params[0]);
 	res.sendfile('demo/' + req.params[0]);
 });
 
