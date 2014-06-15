@@ -42,10 +42,10 @@ app.post(/\/(red|green|blue|orange|yellow|white|all|random)\/?/, function(req, r
 
 // Demo page
 app.get(/\/demo\/?/, function(req, res) {
-	res.sendfile('static/index.html');
+	res.sendfile('demo/index.html');
 });
-app.get(/\/static\/([^\/]+)/, function(req, res) {
-	res.sendfile('static/' + req.params[0]);
+app.get(/\/demo\/([^\/]+)/, function(req, res) {
+	res.sendfile('demo/' + req.params[0]);
 });
 
 // everything else just returns the current values
@@ -68,7 +68,7 @@ piglow(function(error, piInit) {
  	 	pi.reset;
 		console.log('>>> piglow init success');
 	} else {
-		console.log('>>> piglow init failed, defaulting to mocked interface: ' + error);
+		console.log('>>> piglow init failed, defaulting to mocked interface');
 		var PiGlowBackendMock = piglow.BackendMock;
 		var piGlowInterface = piglow.piGlowInterface;
 
