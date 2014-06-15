@@ -2,16 +2,22 @@
 		display:     block;
 		position:    relative;
 		height:      30px;
-		width:       500px;
+		width:       200px;
+		margin-top: 10px;
 	}
 
 	slider span.bar {
 		height:     50%;
 		z-index:    0;
-		background: #eee;
-		left:       0;
+		left:		0;
+		//background: #eee;
+		background:	linear-gradient(to right,#aaa,#eee);
 		top:        25%;
 		cursor:     pointer;
+		float:		right;
+		border-radius:	  4px 4px 4px 4px;
+		border-color:	#eee;
+	
 	}
 
 	slider span.bar.selection, slider span.bar.unselected {
@@ -33,7 +39,8 @@
 		width:            15px;
 		top:              0;
 		bottom:           0;
-		background-color: #00a;
+		background: linear-gradient(#aaf, #00a);
+		border-radius:	  4px 4px 4px 4px;
 	}
 
 	slider span.pointer:hover {
@@ -43,13 +50,14 @@
 	}
 
 	slider span.bubble {
-		font-size:   0.7em;
-		line-height: 1.4em;
+		font-size:   0.6em;
+		line-height: 1.8em;
 		font-family: sans-serif;
 		text-align:  center;
 		text-shadow: none;
 		top:         -1.3em;
 		cursor:      pointer;
+		color:		#999;
 	}
 
 	slider span.bubble.selection, slider span.bubble.limit {
@@ -67,4 +75,21 @@
 
 	::-ms-tooltip {
 		display: none;
+	}
+
+
+	div.slider {
+		background-color: #fafafa;
+		border-style: solid;
+		border-width: 1px;
+		border-color: #ddd;
+		border-radius: 4px 4px 0 0;
+		margin: 5px 10px;
+		padding: 4px 5px;
+		width: 225px;
+	}
+
+	div.section {
+		display: block;
+		margin-bottom: 20px;
 	}
