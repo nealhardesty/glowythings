@@ -17,7 +17,7 @@ function setAndUpdate($scope, $http, ledIdent, brightness) {
 			$scope.data.white = (parseInt(data.l_0_5) + parseInt(data.l_1_5) + parseInt(data.l_2_5)) / 3;
 		})
 		.error(function(data, status) {
-			$scope.error = "Failed to POST to /' + ledIdent + '?brightness=' + brightness + ' : ' + status";
+			$scope.error = 'Failed to POST to /' + ledIdent + '?brightness=' + brightness + ' : ' + status;
 		});
 }
 
