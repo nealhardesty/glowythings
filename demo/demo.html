@@ -19,7 +19,7 @@
 </ion-header-bar>
 <ion-content class="has-header">
 
-<p>{{error}}</p>
+<div>{{error}}</div>
 
 <ul class="list">
 	<li class="item">
@@ -37,7 +37,7 @@
 		<div class="range range-assertive" id="redRing">
 			Red / Ring 0
 			<i class="icon ion-ios7-sunny"></i>
-			<input type="range" ng-model="data.red" min="0" max="254" ng-change="update('red')">
+			<input type="range" name="red" ng-model="data.red" min="0" max="254" ng-change="update('red')"></input>
 			<i class="icon ion-ios7-sunny-outline"></i>
 		</div>
 	</li>
@@ -45,7 +45,7 @@
 		<div class="range range-energized" id="orangeRing">
 			Orange / Ring 1
 			<i class="icon ion-ios7-sunny"></i>
-			<input type="range" ng-model="data.orange" min="0" max="254" ng-change="update('orange')"></input>
+			<input type="range" name="orange" ng-model="data.orange" min="0" max="254" ng-change="update('orange')"></input>
 			<i class="icon ion-ios7-sunny-outline"></i>
 		</div>
 	</li>
@@ -53,7 +53,7 @@
 		<div class="range range-energized" id="yellowRing">
 			Yellow / Ring 2
 			<i class="icon ion-ios7-sunny"></i>
-			<input type="range" ng-model="data.yellow" min="0" max="254" ng-change="update('yellow')"></input>
+			<input type="range" name="yellow" ng-model="data.yellow" min="0" max="254" ng-change="update('yellow')"></input>
 			<i class="icon ion-ios7-sunny-outline"></i>
 		</div>
 	</li>
@@ -61,7 +61,7 @@
 		<div class="range range-balanced" id="greenRing">
 			Green / Ring 3
 			<i class="icon ion-ios7-sunny"></i>
-			<input type="range" ng-model="data.green" min="0" max="254" ng-change="update('green')"></input>
+			<input type="range" name="green" ng-model="data.green" min="0" max="254" ng-change="update('green')"></input>
 			<i class="icon ion-ios7-sunny-outline"></i>
 		</div>
 	</li>
@@ -69,7 +69,7 @@
 		<div class="range range-positive" id="blueRing">
 			Blue / Ring 4
 			<i class="icon ion-ios7-sunny"></i>
-			<input type="range" ng-model="data.blue" min="0" max="254" ng-change="update('blue')"></input>
+			<input type="range" name="blue" ng-model="data.blue" min="0" max="254" ng-change="update('blue')"></input>
 			<i class="icon ion-ios7-sunny-outline"></i>
 		</div>
 	</li>
@@ -77,14 +77,14 @@
 		<div class="range range-light" id="whiteRing">
 			White / Ring 5
 			<i class="icon ion-ios7-sunny"></i>
-			<input type="range" ng-model="data.white" min="0" max="254" ng-change="update('white')"></input>
+			<input type="range" name="white" ng-model="data.white" min="0" max="254" ng-change="update('white')"></input>
 			<i class="icon ion-ios7-sunny-outline"></i>
 		</div>
 	</li>
 </ul>
 
 <ul class="section list-inline">
-	<li>
+	<li class="item">
 		<div class="range" id="l_0_0">
 			Leg 0 Ring 0
 			<i class="icon ion-ios7-sunny"></i>
@@ -92,7 +92,7 @@
 			<i class="icon ion-ios7-sunny-outline"></i>
 		</div>
 	</li>
-	<li>
+	<li class="item">
 		<div class="range" id="l_1_0">
 			Leg 1 Ring 0
 			<i class="icon ion-ios7-sunny"></i>
@@ -100,7 +100,7 @@
 			<i class="icon ion-ios7-sunny-outline"></i>
 		</div>
 	</li>
-	<li>
+	<li class="item">
 		<div class="range" id="l_2_0">
 			Leg 2 Ring 0
 			<i class="icon ion-ios7-sunny"></i>
@@ -108,7 +108,7 @@
 			<i class="icon ion-ios7-sunny-outline"></i>
 		</div>
 	</li>
-	<li>
+	<li class="item">
 
 		<div class="range" id="l_0_1">
 			Leg 0 Ring 1
@@ -117,7 +117,7 @@
 			<i class="icon ion-ios7-sunny-outline"></i>
 		</div>
 	</li>
-	<li>
+	<li class="item">
 		<div class="range" id="l_1_1">
 			Leg 1 Ring 1
 			<i class="icon ion-ios7-sunny"></i>
@@ -125,7 +125,7 @@
 			<i class="icon ion-ios7-sunny-outline"></i>
 		</div>
 	</li>
-	<li>
+	<li class="item">
 		<div class="range" id="l_2_1">
 			Leg 2 Ring 1
 			<i class="icon ion-ios7-sunny"></i>
@@ -133,8 +133,7 @@
 			<i class="icon ion-ios7-sunny-outline"></i>
 		</div>
 	</li>
-	<li>
-
+	<li class="item">
 		<div class="range" id="l_0_2">
 			Leg 0 Ring 2
 			<i class="icon ion-ios7-sunny"></i>
@@ -142,7 +141,7 @@
 			<i class="icon ion-ios7-sunny-outline"></i>
 		</div>
 	</li>
-	<li>
+	<li class="item">
 		<div class="range" id="l_1_2">
 			Leg 1 Ring 2
 			<i class="icon ion-ios7-sunny"></i>
@@ -150,7 +149,7 @@
 			<i class="icon ion-ios7-sunny-outline"></i>
 		</div>
 	</li>
-	<li>
+	<li class="item">
 		<div class="range" id="l_2_2">
 			Leg 2 Ring 2
 			<i class="icon ion-ios7-sunny"></i>
@@ -158,8 +157,7 @@
 			<i class="icon ion-ios7-sunny-outline"></i>
 		</div>
 	</li>
-	<li>
-
+	<li class="item">
 		<div class="range" id="l_0_3">
 			Leg 0 Ring 3
 			<i class="icon ion-ios7-sunny"></i>
@@ -167,7 +165,7 @@
 			<i class="icon ion-ios7-sunny-outline"></i>
 		</div>
 	</li>
-	<li>
+	<li class="item">
 		<div class="range" id="l_1_3">
 			Leg 1 Ring 3
 			<i class="icon ion-ios7-sunny"></i>
@@ -175,7 +173,7 @@
 			<i class="icon ion-ios7-sunny-outline"></i>
 		</div>
 	</li>
-	<li>
+	<li class="item">
 		<div class="range" id="l_2_3">
 			Leg 2 Ring 3
 			<i class="icon ion-ios7-sunny"></i>
@@ -183,7 +181,7 @@
 			<i class="icon ion-ios7-sunny-outline"></i>
 		</div>
 	</li>
-	<li>
+	<li class="item">
 
 		<div class="range" id="l_0_4">
 			Leg 0 Ring 4
@@ -192,7 +190,7 @@
 			<i class="icon ion-ios7-sunny-outline"></i>
 		</div>
 	</li>
-	<li>
+	<li class="item">
 		<div class="range" id="l_1_4">
 			Leg 1 Ring 4
 			<i class="icon ion-ios7-sunny"></i>
@@ -200,7 +198,7 @@
 			<i class="icon ion-ios7-sunny-outline"></i>
 		</div>
 	</li>
-	<li>
+	<li class="item">
 		<div class="range" id="l_2_4">
 			Leg 2 Ring 4
 			<i class="icon ion-ios7-sunny"></i>
@@ -208,8 +206,7 @@
 			<i class="icon ion-ios7-sunny-outline"></i>
 		</div>
 	</li>
-	<li>
-
+	<li class="item">
 		<div class="range" id="l_0_5">
 			Leg 0 Ring 5
 			<i class="icon ion-ios7-sunny"></i>
@@ -217,7 +214,7 @@
 			<i class="icon ion-ios7-sunny-outline"></i>
 		</div>
 	</li>
-	<li>
+	<li class="item">
 		<div class="range" id="l_1_5">
 			Leg 1 Ring 5
 			<i class="icon ion-ios7-sunny"></i>
@@ -225,7 +222,7 @@
 			<i class="icon ion-ios7-sunny-outline"></i>
 		</div>
 	</li>
-	<li>
+	<li class="item">
 		<div class="range" id="l_2_5">
 			Leg 2 Ring 5
 			<i class="icon ion-ios7-sunny"></i>
