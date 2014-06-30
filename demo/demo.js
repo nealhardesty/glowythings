@@ -1,6 +1,6 @@
 (function() {
 
-var demoApp = angular.module('glowythingsDemoApp', ['vr.directives.slider']);
+var demoApp = angular.module('glowythingsDemoApp', []);
 
 function setAndUpdate($scope, $http, ledIdent, brightness) {
 	$http.post('/' + ledIdent + '?brightness=' + brightness)

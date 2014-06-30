@@ -2,183 +2,239 @@
 <html lang="en" ng-app="glowythingsDemoApp">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 	<title>Glowy Things!</title>
-	<link rel="stylesheet" type="text/css" href="/demo/bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/demo/bower_components/ionic/release/css/ionic.css">
 	<link rel="stylesheet" type="text/css" href="/demo/demo.css">
-	<script src="/demo/bower_components/angular/angular.min.js"></script>
-	<script src="/demo/bower_components/angular-touch/angular-touch.min.js"></script>
-	<script src="/demo/bower_components/angular-slider/build/angular-slider.min.js"></script>
+	<script src="/demo/bower_components/ionic/release/js/ionic.bundle.js"></script>
 	<script src="/demo/demo.js"></script>
 </head>
-<body ng-controller="glowythingsController">
-	<p>{{error}}</p>
+<body ng-controller="glowythingsController" animation="slide-left-right-ios7">
+	
+<ion-scroll>
+<ion-header-bar class="bar-stable">
+<h1 class="title">
+	Glowy Things
+</h1>
+</ion-header-bar>
+<ion-content class="has-header">
 
-	<ul class="section list-inline">
-	<li>
-	<div class="slider" id="all">
-		Everything
-		<slider ng-model="data.all" floor="0" ceiling="254" ng-change="update('all')"></div>
-	</div>
-	</li>
-	</ul>
+<p>{{error}}</p>
 
-	<ul class="section list-inline">
-	<li>
-	<div class="slider" id="redRing">
-		Red / Ring 0
-		<slider ng-model="data.red" floor="0" ceiling="254" ng-change="update('red')"></div>
-	</div>
+<ul class="list">
+	<li class="item">
+		<div class="range range-light" id="all">
+			Everything 
+			<i class="icon ion-ios7-sunny"></i>
+			<input type="range" name="all" ng-model="data.all" min="0" max="254" ng-change="update('all')"></input>
+			<i class="icon ion-ios7-sunny-outline"></i>
+		</div>
 	</li>
-	<li>
-	<div class="slider" id="orangeRing">
-		Orange / Ring 1
-		<slider ng-model="data.orange" floor="0" ceiling="254" ng-change="update('orange')"></div>
-	</div>
-	</li>
-	<li>
-	<div class="slider" id="yellowRing">
-		Yellow / Ring 2
-		<slider ng-model="data.yellow" floor="0" ceiling="254" ng-change="update('yellow')"></div>
-	</div>
-	</li>
-	<li>
-	<div class="slider" id="greenRing">
-		Green / Ring 3
-		<slider ng-model="data.green" floor="0" ceiling="254" ng-change="update('green')"></div>
-	</div>
-	</li>
-	<li>
-	<div class="slider" id="blueRing">
-		Blue / Ring 4
-		<slider ng-model="data.blue" floor="0" ceiling="254" ng-change="update('blue')"></div>
-	</div>
-	</li>
-	<li>
-	<div class="slider" id="whiteRing">
-		White / Ring 5
-		<slider ng-model="data.white" floor="0" ceiling="254" ng-change="update('white')"></div>
-	</div>
-	</li>
-	</ul>
+</ul>
 
-	<ul class="section list-inline">
-	<li>
-	<div class="slider" id="l_0_0">
-		Leg 0 Ring 0
-		<slider ng-model="data.l_0_0" floor="0" ceiling="254" ng-change="update('l_0_0')"></div>
-	</div>
+<ul class="list">
+	<li class="item">
+		<div class="range range-assertive" id="redRing">
+			Red / Ring 0
+			<i class="icon ion-ios7-sunny"></i>
+			<input type="range" ng-model="data.red" min="0" max="254" ng-change="update('red')">
+			<i class="icon ion-ios7-sunny-outline"></i>
+		</div>
 	</li>
-	<li>
-	<div class="slider" id="l_1_0">
-		Leg 1 Ring 0
-		<slider ng-model="data.l_1_0" floor="0" ceiling="254" ng-change="update('l_1_0')"></div>
-	</div>
+	<li class="item">
+		<div class="range range-energized" id="orangeRing">
+			Orange / Ring 1
+			<i class="icon ion-ios7-sunny"></i>
+			<input type="range" ng-model="data.orange" min="0" max="254" ng-change="update('orange')"></input>
+			<i class="icon ion-ios7-sunny-outline"></i>
+		</div>
 	</li>
-	<li>
-	<div class="slider" id="l_2_0">
-		Leg 2 Ring 0
-		<slider ng-model="data.l_2_0" floor="0" ceiling="254" ng-change="update('l_2_0')"></div>
-	</div>
+	<li class="item">
+		<div class="range range-energized" id="yellowRing">
+			Yellow / Ring 2
+			<i class="icon ion-ios7-sunny"></i>
+			<input type="range" ng-model="data.yellow" min="0" max="254" ng-change="update('yellow')"></input>
+			<i class="icon ion-ios7-sunny-outline"></i>
+		</div>
 	</li>
-	<li>
+	<li class="item">
+		<div class="range range-balanced" id="greenRing">
+			Green / Ring 3
+			<i class="icon ion-ios7-sunny"></i>
+			<input type="range" ng-model="data.green" min="0" max="254" ng-change="update('green')"></input>
+			<i class="icon ion-ios7-sunny-outline"></i>
+		</div>
+	</li>
+	<li class="item">
+		<div class="range range-positive" id="blueRing">
+			Blue / Ring 4
+			<i class="icon ion-ios7-sunny"></i>
+			<input type="range" ng-model="data.blue" min="0" max="254" ng-change="update('blue')"></input>
+			<i class="icon ion-ios7-sunny-outline"></i>
+		</div>
+	</li>
+	<li class="item">
+		<div class="range range-light" id="whiteRing">
+			White / Ring 5
+			<i class="icon ion-ios7-sunny"></i>
+			<input type="range" ng-model="data.white" min="0" max="254" ng-change="update('white')"></input>
+			<i class="icon ion-ios7-sunny-outline"></i>
+		</div>
+	</li>
+</ul>
 
-	<div class="slider" id="l_0_1">
-		Leg 0 Ring 1
-		<slider ng-model="data.l_0_1" floor="0" ceiling="254" ng-change="update('l_0_1')"></div>
-	</div>
+<ul class="section list-inline">
+	<li>
+		<div class="range" id="l_0_0">
+			Leg 0 Ring 0
+			<i class="icon ion-ios7-sunny"></i>
+			<input type="range" ng-model="data.l_0_0" min="0" max="254" ng-change="update('l_0_0')"></input>
+			<i class="icon ion-ios7-sunny-outline"></i>
+		</div>
 	</li>
 	<li>
-	<div class="slider" id="l_1_1">
-		Leg 1 Ring 1
-		<slider ng-model="data.l_1_1" floor="0" ceiling="254" ng-change="update('l_1_1')"></div>
-	</div>
+		<div class="range" id="l_1_0">
+			Leg 1 Ring 0
+			<i class="icon ion-ios7-sunny"></i>
+			<input type="range" ng-model="data.l_1_0" min="0" max="254" ng-change="update('l_1_0')"></input>
+			<i class="icon ion-ios7-sunny-outline"></i>
+		</div>
 	</li>
 	<li>
-	<div class="slider" id="l_2_1">
-		Leg 2 Ring 1
-		<slider ng-model="data.l_2_1" floor="0" ceiling="254" ng-change="update('l_2_1')"></div>
-	</div>
-	</li>
-	<li>
-
-	<div class="slider" id="l_0_2">
-		Leg 0 Ring 2
-		<slider ng-model="data.l_0_2" floor="0" ceiling="254" ng-change="update('l_0_2')"></div>
-	</div>
-	</li>
-	<li>
-	<div class="slider" id="l_1_2">
-		Leg 1 Ring 2
-		<slider ng-model="data.l_1_2" floor="0" ceiling="254" ng-change="update('l_1_2')"></div>
-	</div>
-	</li>
-	<li>
-	<div class="slider" id="l_2_2">
-		Leg 2 Ring 2
-		<slider ng-model="data.l_2_2" floor="0" ceiling="254" ng-change="update('l_2_2')"></div>
-	</div>
+		<div class="range" id="l_2_0">
+			Leg 2 Ring 0
+			<i class="icon ion-ios7-sunny"></i>
+			<input type="range" ng-model="data.l_2_0" min="0" max="254" ng-change="update('l_2_0')"></input>
+			<i class="icon ion-ios7-sunny-outline"></i>
+		</div>
 	</li>
 	<li>
 
-	<div class="slider" id="l_0_3">
-		Leg 0 Ring 3
-		<slider ng-model="data.l_0_3" floor="0" ceiling="254" ng-change="update('l_0_3')"></div>
-	</div>
+		<div class="range" id="l_0_1">
+			Leg 0 Ring 1
+			<i class="icon ion-ios7-sunny"></i>
+			<input type="range" ng-model="data.l_0_1" min="0" max="254" ng-change="update('l_0_1')"></input>
+			<i class="icon ion-ios7-sunny-outline"></i>
+		</div>
 	</li>
 	<li>
-	<div class="slider" id="l_1_3">
-		Leg 1 Ring 3
-		<slider ng-model="data.l_1_3" floor="0" ceiling="254" ng-change="update('l_1_3')"></div>
-	</div>
+		<div class="range" id="l_1_1">
+			Leg 1 Ring 1
+			<i class="icon ion-ios7-sunny"></i>
+			<input type="range" ng-model="data.l_1_1" min="0" max="254" ng-change="update('l_1_1')"></input>
+			<i class="icon ion-ios7-sunny-outline"></i>
+		</div>
 	</li>
 	<li>
-	<div class="slider" id="l_2_3">
-		Leg 2 Ring 3
-		<slider ng-model="data.l_2_3" floor="0" ceiling="254" ng-change="update('l_2_3')"></div>
-	</div>
-	</li>
-	<li>
-
-	<div class="slider" id="l_0_4">
-		Leg 0 Ring 4
-		<slider ng-model="data.l_0_4" floor="0" ceiling="254" ng-change="update('l_0_4')"></div>
-	</div>
-	</li>
-	<li>
-	<div class="slider" id="l_1_4">
-		Leg 1 Ring 4
-		<slider ng-model="data.l_1_3" floor="0" ceiling="254" ng-change="update('l_1_4')"></div>
-	</div>
-	</li>
-	<li>
-	<div class="slider" id="l_2_4">
-		Leg 2 Ring 4
-		<slider ng-model="data.l_2_4" floor="0" ceiling="254" ng-change="update('l_2_4')"></div>
-	</div>
+		<div class="range" id="l_2_1">
+			Leg 2 Ring 1
+			<i class="icon ion-ios7-sunny"></i>
+			<input type="range" ng-model="data.l_2_1" min="0" max="254" ng-change="update('l_2_1')"></input>
+			<i class="icon ion-ios7-sunny-outline"></i>
+		</div>
 	</li>
 	<li>
 
-	<div class="slider" id="l_0_5">
-		Leg 0 Ring 5
-		<slider ng-model="data.l_0_5" floor="0" ceiling="254" ng-change="update('l_0_5')"></div>
-	</div>
+		<div class="range" id="l_0_2">
+			Leg 0 Ring 2
+			<i class="icon ion-ios7-sunny"></i>
+			<input type="range" ng-model="data.l_0_2" min="0" max="254" ng-change="update('l_0_2')"></input>
+			<i class="icon ion-ios7-sunny-outline"></i>
+		</div>
 	</li>
 	<li>
-	<div class="slider" id="l_1_5">
-		Leg 1 Ring 5
-		<slider ng-model="data.l_1_5" floor="0" ceiling="254" ng-change="update('l_1_5')"></div>
-	</div>
+		<div class="range" id="l_1_2">
+			Leg 1 Ring 2
+			<i class="icon ion-ios7-sunny"></i>
+			<input type="range" ng-model="data.l_1_2" min="0" max="254" ng-change="update('l_1_2')"></input>
+			<i class="icon ion-ios7-sunny-outline"></i>
+		</div>
 	</li>
 	<li>
-	<div class="slider" id="l_2_5">
-		Leg 2 Ring 5
-		<slider ng-model="data.l_2_5" floor="0" ceiling="254" ng-change="update('l_2_5')"></div>
-	</div>
+		<div class="range" id="l_2_2">
+			Leg 2 Ring 2
+			<i class="icon ion-ios7-sunny"></i>
+			<input type="range" ng-model="data.l_2_2" min="0" max="254" ng-change="update('l_2_2')"></input>
+			<i class="icon ion-ios7-sunny-outline"></i>
+		</div>
 	</li>
-	</ul>
+	<li>
 
+		<div class="range" id="l_0_3">
+			Leg 0 Ring 3
+			<i class="icon ion-ios7-sunny"></i>
+			<input type="range" ng-model="data.l_0_3" min="0" max="254" ng-change="update('l_0_3')"></input>
+			<i class="icon ion-ios7-sunny-outline"></i>
+		</div>
+	</li>
+	<li>
+		<div class="range" id="l_1_3">
+			Leg 1 Ring 3
+			<i class="icon ion-ios7-sunny"></i>
+			<input type="range" ng-model="data.l_1_3" min="0" max="254" ng-change="update('l_1_3')"></input>
+			<i class="icon ion-ios7-sunny-outline"></i>
+		</div>
+	</li>
+	<li>
+		<div class="range" id="l_2_3">
+			Leg 2 Ring 3
+			<i class="icon ion-ios7-sunny"></i>
+			<input type="range" ng-model="data.l_2_3" min="0" max="254" ng-change="update('l_2_3')"></input>
+			<i class="icon ion-ios7-sunny-outline"></i>
+		</div>
+	</li>
+	<li>
 
+		<div class="range" id="l_0_4">
+			Leg 0 Ring 4
+			<i class="icon ion-ios7-sunny"></i>
+			<input type="range" ng-model="data.l_0_4" min="0" max="254" ng-change="update('l_0_4')"></input>
+			<i class="icon ion-ios7-sunny-outline"></i>
+		</div>
+	</li>
+	<li>
+		<div class="range" id="l_1_4">
+			Leg 1 Ring 4
+			<i class="icon ion-ios7-sunny"></i>
+			<input type="range" ng-model="data.l_1_3" min="0" max="254" ng-change="update('l_1_4')"></input>
+			<i class="icon ion-ios7-sunny-outline"></i>
+		</div>
+	</li>
+	<li>
+		<div class="range" id="l_2_4">
+			Leg 2 Ring 4
+			<i class="icon ion-ios7-sunny"></i>
+			<input type="range" ng-model="data.l_2_4" min="0" max="254" ng-change="update('l_2_4')"></input>
+			<i class="icon ion-ios7-sunny-outline"></i>
+		</div>
+	</li>
+	<li>
 
+		<div class="range" id="l_0_5">
+			Leg 0 Ring 5
+			<i class="icon ion-ios7-sunny"></i>
+			<input type="range" ng-model="data.l_0_5" min="0" max="254" ng-change="update('l_0_5')"></input>
+			<i class="icon ion-ios7-sunny-outline"></i>
+		</div>
+	</li>
+	<li>
+		<div class="range" id="l_1_5">
+			Leg 1 Ring 5
+			<i class="icon ion-ios7-sunny"></i>
+			<input type="range" ng-model="data.l_1_5" min="0" max="254" ng-change="update('l_1_5')"></input>
+			<i class="icon ion-ios7-sunny-outline"></i>
+		</div>
+	</li>
+	<li>
+		<div class="range" id="l_2_5">
+			Leg 2 Ring 5
+			<i class="icon ion-ios7-sunny"></i>
+			<input type="range" ng-model="data.l_2_5" min="0" max="254" ng-change="update('l_2_5')"></input>
+			<i class="icon ion-ios7-sunny-outline"></i>
+		</div>
+	</li>
+</ul>
+</ion-content>
+</ion-scroll>
 </body>
 </html>

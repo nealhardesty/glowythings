@@ -20,7 +20,6 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "1.2.18",
-    "angular-slider": "git://github.com/Venturocket/angular-slider.git"
+	 "ionic": "*"
   }
 }
